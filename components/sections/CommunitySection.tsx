@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button";
+import { CosmicCard } from "@/components/ui/CosmicCard";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { Section } from "@/components/ui/Section";
 
 const links = [
   { label: "Twitter", href: "https://twitter.com" },
@@ -11,21 +11,22 @@ const links = [
 
 export function CommunitySection() {
   return (
-    <Section id="community" title="Join the Cloud" className="pb-28">
+    <section id="community">
       <FadeIn>
-        <div className="mx-auto flex max-w-3xl flex-wrap justify-center gap-3">
-          {links.map((link) => (
-            <Button
-              key={link.label}
-              href={link.href}
-              variant="secondary"
-              className="min-w-32 hover:-translate-y-0.5"
-            >
-              {link.label}
-            </Button>
-          ))}
-        </div>
+        <CosmicCard className="p-6 sm:p-7">
+          <h3 className="text-center font-[var(--font-space-grotesk)] text-5xl font-semibold text-white">
+            Join the Cloud
+          </h3>
+
+          <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {links.map((link) => (
+              <Button key={link.label} href={link.href} variant="social" className="w-full text-lg">
+                {link.label}
+              </Button>
+            ))}
+          </div>
+        </CosmicCard>
       </FadeIn>
-    </Section>
+    </section>
   );
 }

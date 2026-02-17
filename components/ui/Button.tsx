@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "social" | "ghost";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -14,15 +14,17 @@ type ButtonProps = {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "border-cosmic-gold/60 bg-cosmic-gold/20 text-cosmic-gold hover:bg-cosmic-gold/30 hover:shadow-glow",
+    "border-cosmic-gold/70 bg-gradient-to-r from-indigo-500/25 via-violet-500/25 to-fuchsia-500/25 text-white hover:border-cosmic-gold hover:shadow-glow",
   secondary:
-    "border-white/20 bg-white/5 text-white hover:border-cosmic-gold/40 hover:text-cosmic-gold hover:shadow-glow-soft",
+    "border-white/30 bg-slate-900/55 text-white hover:border-cosmic-gold/70 hover:text-cosmic-gold hover:shadow-glow-soft",
+  social:
+    "border-violet-300/45 bg-gradient-to-r from-indigo-500/20 to-fuchsia-500/20 text-white hover:border-cosmic-gold/60 hover:shadow-glow-soft",
   ghost:
     "border-transparent bg-transparent text-slate-300 hover:border-white/20 hover:bg-white/5 hover:text-white"
 };
 
 const baseStyles =
-  "inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold tracking-wide transition-all duration-300";
+  "inline-flex items-center justify-center rounded-xl border px-5 py-2.5 text-sm font-semibold tracking-wide transition-all duration-300";
 
 export function Button({
   children,

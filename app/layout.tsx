@@ -13,8 +13,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "CloudCat | Meme Token Landing",
-  description: "CloudCat is a community-driven meme token floating above market noise."
+  title: "GokuCat | Meme Token Landing",
+  description: "GokuCat is a community-driven meme token floating above market noise."
 };
 
 export default function RootLayout({

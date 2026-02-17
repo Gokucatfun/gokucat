@@ -1,5 +1,5 @@
+import { CosmicCard } from "@/components/ui/CosmicCard";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { Section } from "@/components/ui/Section";
 
 const phases = [
   {
@@ -26,28 +26,29 @@ const phases = [
 
 export function RoadmapSection() {
   return (
-    <Section id="roadmap" title="Roadmap">
-      {/* Horizontal timeline remains scrollable on small screens. */}
+    <section id="roadmap">
       <FadeIn>
-        <div className="overflow-x-auto pb-4">
-          <div className="relative flex min-w-[760px] gap-5 px-2 md:min-w-full">
-            <div className="absolute left-0 right-0 top-16 h-px bg-gradient-to-r from-transparent via-cosmic-gold/60 to-transparent" />
+        <CosmicCard className="p-6 sm:p-8">
+          <h3 className="text-center font-[var(--font-space-grotesk)] text-5xl font-semibold text-white">
+            Roadmap
+          </h3>
+
+          {/* Horizontal timeline that collapses to stacked cards on smaller viewports. */}
+          <div className="relative mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div className="pointer-events-none absolute left-8 right-8 top-5 hidden h-px bg-gradient-to-r from-cosmic-gold/20 via-cosmic-gold/80 to-cosmic-gold/20 xl:block" />
             {phases.map((item) => (
-              <div
-                key={item.phase}
-                className="relative flex-1 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md"
-              >
-                <div className="mb-4 h-3 w-3 rounded-full bg-cosmic-gold shadow-glow" />
-                <p className="text-xs uppercase tracking-[0.18em] text-cosmic-gold">{item.phase}</p>
-                <h3 className="mt-2 font-[var(--font-space-grotesk)] text-xl font-semibold text-white">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm text-slate-300">{item.details}</p>
+              <div key={item.phase} className="rounded-xl border border-white/15 bg-black/20 p-4">
+                <div className="mb-3 flex items-center gap-2">
+                  <span className="h-3 w-3 rounded-full bg-cosmic-gold shadow-glow" />
+                  <span className="text-xs uppercase tracking-[0.18em] text-cosmic-gold">{item.phase}</span>
+                </div>
+                <h4 className="text-2xl font-semibold text-white">{item.title}</h4>
+                <p className="mt-2 text-base text-slate-200">{item.details}</p>
               </div>
             ))}
           </div>
-        </div>
+        </CosmicCard>
       </FadeIn>
-    </Section>
+    </section>
   );
 }

@@ -9,23 +9,25 @@ import { CosmicCard } from "@/components/ui/CosmicCard";
 export function HeroSection() {
   return (
     <section id="top">
-      <CosmicCard className="min-h-[640px] p-6 sm:p-8 lg:min-h-[680px]">
+      <CosmicCard className="card-sky-hero min-h-[800px] p-6 sm:p-8">
         <Navbar />
 
-        <div className="mx-auto mt-8 flex max-w-3xl flex-col items-center text-center sm:mt-10">
+        <div className="mx-auto mt-10 flex max-w-4xl flex-col items-center text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative"
           >
-            <CatMascot className="h-44 w-44 sm:h-56 sm:w-56" />
+            <div className="pointer-events-none absolute -bottom-10 left-1/2 h-24 w-56 -translate-x-1/2 rounded-full bg-cosmic-gold/40 blur-3xl" />
+            <CatMascot className="h-56 w-56 sm:h-64 sm:w-64" />
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 22 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.12, ease: "easeOut" }}
-            className="mt-8 font-[var(--font-space-grotesk)] text-6xl font-extrabold tracking-tight text-white sm:text-7xl"
+            className="mt-14 font-[var(--font-space-grotesk)] text-[4.1rem] font-extrabold tracking-tight text-white sm:text-[5.2rem]"
           >
             GOKUCAT
           </motion.h1>
@@ -34,7 +36,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="mt-2 text-2xl text-slate-100/95"
+            className="mt-2 text-[2rem] text-slate-100"
           >
             Above the noise. Riding the cloud.
           </motion.p>
@@ -45,13 +47,13 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.28, ease: "easeOut" }}
             className="mt-8 flex flex-wrap justify-center gap-3"
           >
-            <Button variant="primary" href="#community">
+            <Button variant="hero" href="#community" className="min-w-[170px] text-[1.6rem] sm:text-base">
               Buy $GOKU
             </Button>
-            <Button variant="secondary" href="#tokenomics">
+            <Button variant="hero" href="#tokenomics" className="min-w-[170px] text-[1.6rem] sm:text-base">
               View Chart
             </Button>
-            <Button variant="secondary" href="#about">
+            <Button variant="hero" href="#about" className="min-w-[170px] text-[1.6rem] sm:text-base">
               Read the Lore
             </Button>
           </motion.div>
@@ -59,8 +61,8 @@ export function HeroSection() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 text-3xl tracking-wide text-white"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-7 text-4xl text-white"
           >
             gokucat.eth
           </motion.p>

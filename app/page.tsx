@@ -15,8 +15,7 @@ export default function Home() {
       <Starfield />
       <div className="cosmic-overlay pointer-events-none absolute inset-0" />
 
-      <main className="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* Top row: Hero + About */}
+      <main className="relative z-10 mx-auto max-w-[1550px] px-4 py-8 sm:px-6 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
           <div className="space-y-3">
             <SectionTag>Hero Section</SectionTag>
@@ -28,7 +27,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Mid row: Tokenomics + Community cards */}
         <div className="mt-7 grid gap-6 lg:grid-cols-[2fr_1fr]">
           <div className="space-y-3">
             <SectionTag>Tokenomics</SectionTag>
@@ -46,7 +44,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom row: Roadmap + full footer */}
         <div className="mt-7 grid gap-6 lg:grid-cols-2">
           <div className="space-y-3">
             <SectionTag>Roadmap</SectionTag>

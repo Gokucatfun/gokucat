@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "social" | "ghost";
+type ButtonVariant = "hero" | "wallet" | "social";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -13,23 +13,21 @@ type ButtonProps = {
 };
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary:
-    "border-cosmic-gold/70 bg-gradient-to-r from-indigo-500/25 via-violet-500/25 to-fuchsia-500/25 text-white hover:border-cosmic-gold hover:shadow-glow",
-  secondary:
-    "border-white/30 bg-slate-900/55 text-white hover:border-cosmic-gold/70 hover:text-cosmic-gold hover:shadow-glow-soft",
+  hero:
+    "border-indigo-200/40 bg-gradient-to-r from-indigo-500/28 via-violet-500/28 to-fuchsia-500/28 text-white shadow-[0_0_20px_rgba(147,51,234,0.26)] hover:border-cosmic-gold/60 hover:shadow-glow-soft",
+  wallet:
+    "border-indigo-200/45 bg-black/30 text-white shadow-[0_0_14px_rgba(104,90,255,0.28)] hover:border-cosmic-gold/70 hover:text-cosmic-gold",
   social:
-    "border-violet-300/45 bg-gradient-to-r from-indigo-500/20 to-fuchsia-500/20 text-white hover:border-cosmic-gold/60 hover:shadow-glow-soft",
-  ghost:
-    "border-transparent bg-transparent text-slate-300 hover:border-white/20 hover:bg-white/5 hover:text-white"
+    "border-violet-200/45 bg-gradient-to-r from-indigo-500/22 to-fuchsia-500/22 text-white shadow-[0_0_20px_rgba(139,92,246,0.24)] hover:border-cosmic-gold/65 hover:shadow-glow-soft"
 };
 
 const baseStyles =
-  "inline-flex items-center justify-center rounded-xl border px-5 py-2.5 text-sm font-semibold tracking-wide transition-all duration-300";
+  "inline-flex items-center justify-center rounded-xl border px-6 py-2.5 text-sm font-semibold tracking-wide transition-all duration-300";
 
 export function Button({
   children,
   href,
-  variant = "secondary",
+  variant = "hero",
   className,
   target,
   rel

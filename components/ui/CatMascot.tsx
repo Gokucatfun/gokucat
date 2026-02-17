@@ -11,12 +11,12 @@ type CatMascotProps = {
 export function CatMascot({ className, float = true }: CatMascotProps) {
   return (
     <motion.div
-      animate={float ? { y: [0, -10, 0] } : undefined}
+      animate={float ? { y: [0, -12, 0] } : undefined}
       transition={{ duration: 4.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-      className={cn("relative overflow-hidden rounded-full border border-cosmic-gold/45", className)}
+      className={cn("relative overflow-hidden rounded-3xl border border-cosmic-gold/40", className)}
     >
-      <div className="pointer-events-none absolute inset-0 z-10 rounded-full ring-2 ring-cosmic-gold/35" />
-      <div className="pointer-events-none absolute -inset-4 -z-10 rounded-full bg-cosmic-gold/30 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 z-10 rounded-3xl ring-1 ring-white/20" />
+      <div className="pointer-events-none absolute -inset-6 -z-10 rounded-full bg-cosmic-gold/28 blur-3xl" />
       <video
         src="/gokucat.mp4"
         className="h-full w-full object-cover"

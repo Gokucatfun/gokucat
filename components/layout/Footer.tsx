@@ -3,8 +3,8 @@ import { CosmicCard } from "@/components/ui/CosmicCard";
 export function Footer() {
   return (
     <footer>
-      <CosmicCard className="min-h-[330px] p-6 sm:p-8">
-        <h3 className="text-center font-[var(--font-space-grotesk)] text-[3.6rem] font-semibold text-white">
+      <CosmicCard className="min-h-[320px] p-6 sm:p-8">
+        <h3 className="text-center font-[var(--font-space-grotesk)] text-[3.1rem] font-semibold text-white">
           gokucat.eth
         </h3>
 

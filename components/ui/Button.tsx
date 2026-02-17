@@ -14,15 +14,15 @@ type ButtonProps = {
 
 const variantStyles: Record<ButtonVariant, string> = {
   hero:
-    "border-indigo-200/40 bg-gradient-to-r from-indigo-500/28 via-violet-500/28 to-fuchsia-500/28 text-white shadow-[0_0_20px_rgba(147,51,234,0.26)] hover:border-cosmic-gold/60 hover:shadow-glow-soft",
+    "border-indigo-200/70 bg-gradient-to-r from-indigo-500/40 via-violet-500/38 to-fuchsia-500/36 text-white shadow-[0_0_28px_rgba(147,51,234,0.32)] hover:border-cosmic-gold/70 hover:shadow-glow-soft",
   wallet:
-    "border-indigo-200/45 bg-black/30 text-white shadow-[0_0_14px_rgba(104,90,255,0.28)] hover:border-cosmic-gold/70 hover:text-cosmic-gold",
+    "border-indigo-100/65 bg-black/35 text-white shadow-[0_0_16px_rgba(104,90,255,0.28)] hover:border-cosmic-gold/70 hover:text-cosmic-gold",
   social:
-    "border-violet-200/45 bg-gradient-to-r from-indigo-500/22 to-fuchsia-500/22 text-white shadow-[0_0_20px_rgba(139,92,246,0.24)] hover:border-cosmic-gold/65 hover:shadow-glow-soft"
+    "border-violet-100/65 bg-gradient-to-r from-indigo-500/26 to-fuchsia-500/26 text-white shadow-[0_0_22px_rgba(139,92,246,0.26)] hover:border-cosmic-gold/65 hover:shadow-glow-soft"
 };
 
 const baseStyles =
-  "inline-flex items-center justify-center rounded-xl border px-6 py-2.5 text-sm font-semibold tracking-wide transition-all duration-300";
+  "inline-flex items-center justify-center rounded-full border px-7 py-3 text-base font-semibold tracking-wide transition-all duration-300";
 
 export function Button({
   children,

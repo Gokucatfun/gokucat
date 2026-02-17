@@ -13,7 +13,7 @@ export function RoadmapSection() {
     <section id="roadmap">
       <FadeIn>
         <CosmicCard className="p-6 sm:p-8">
-          <h3 className="text-center font-[var(--font-space-grotesk)] text-[3.8rem] font-semibold text-white">
+          <h3 className="text-center font-[var(--font-space-grotesk)] text-[3.2rem] font-semibold text-white">
             Roadmap
           </h3>
 

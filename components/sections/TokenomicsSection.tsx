@@ -29,7 +29,7 @@ export function TokenomicsSection() {
     <section id="tokenomics">
       <FadeIn>
         <CosmicCard className="p-6 sm:p-8">
-          <h3 className="text-center font-[var(--font-space-grotesk)] text-[3.8rem] font-semibold text-white">
+          <h3 className="text-center font-[var(--font-space-grotesk)] text-[3.2rem] font-semibold text-white">
             Tokenomics
           </h3>
 
@@ -44,25 +44,25 @@ export function TokenomicsSection() {
               <div className="absolute inset-0 rounded-full shadow-[0_0_30px_rgba(243,201,105,0.28)]" />
             </motion.div>
 
-            <p className="mt-4 text-[2rem] text-slate-100">Total Supply</p>
-            <p className="text-[3rem] font-extrabold tracking-tight text-white sm:text-[3.3rem]">
+            <p className="mt-6 text-[1.4rem] text-slate-100">Total Supply</p>
+            <p className="text-[2.6rem] font-extrabold tracking-tight text-white sm:text-[2.9rem]">
               1,000,000,000 $GOKU
             </p>
           </div>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
             {distribution.map((item, index) => (
               <FadeIn
                 key={item.label}
                 delay={0.06 * index}
-                className="rounded-xl border border-white/15 bg-black/28 p-4"
+                className="rounded-xl border border-white/15 bg-black/32 p-4"
               >
                 <div className="flex items-center gap-2">
                   <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: item.color }} />
-                  <p className="text-xl font-semibold text-white">{item.label}</p>
+                  <p className="text-lg font-semibold text-white">{item.label}</p>
                 </div>
-                <p className="mt-2 text-[2.5rem] font-bold leading-none text-white">{item.value}%</p>
-                <p className="mt-1 text-sm text-slate-300">{item.note}</p>
+                <p className="mt-2 text-[2.2rem] font-bold leading-none text-white">{item.value}%</p>
+                <p className="mt-1 text-xs text-slate-300">{item.note}</p>
               </FadeIn>
             ))}
           </div>

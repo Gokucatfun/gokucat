@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -17,14 +18,12 @@ export function CatMascot({ className, float = true }: CatMascotProps) {
     >
       <div className="pointer-events-none absolute inset-0 z-10 rounded-3xl ring-1 ring-white/20" />
       <div className="pointer-events-none absolute -inset-6 -z-10 rounded-full bg-cosmic-gold/28 blur-3xl" />
-      <video
-        src="/gokucat.mp4"
-        className="h-full w-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
+      <Image
+        src="/gokucat-still.png"
+        alt="GokuCat mascot"
+        fill
+        priority
+        className="object-cover"
       />
     </motion.div>
   );

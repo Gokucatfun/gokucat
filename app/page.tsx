@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout/Footer";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { CommunitySection } from "@/components/sections/CommunitySection";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { QuoteFormSection } from "@/components/sections/QuoteFormSection";
 import { RoadmapSection } from "@/components/sections/RoadmapSection";
 import { TokenomicsSection } from "@/components/sections/TokenomicsSection";
 
@@ -19,7 +18,6 @@ export default function Home() {
         <TokenomicsSection />
         <RoadmapSection />
         <CommunitySection />
-        <QuoteFormSection />
       </main>
 
       <Footer />

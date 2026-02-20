@@ -1,44 +1,37 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "hero" | "wallet" | "social";
+type Variant = "primary" | "outline" | "social" | "wallet";
 
 type ButtonProps = {
   children: React.ReactNode;
   href?: string;
-  variant?: ButtonVariant;
+  variant?: Variant;
   className?: string;
-  target?: string;
-  rel?: string;
 };
 
-const variantStyles: Record<ButtonVariant, string> = {
-  hero:
-    "border-indigo-200/70 bg-gradient-to-r from-indigo-500/40 via-violet-500/38 to-fuchsia-500/36 text-white shadow-[0_0_28px_rgba(147,51,234,0.32)] hover:border-cosmic-gold/70 hover:shadow-glow-soft",
-  wallet:
-    "border-indigo-100/65 bg-black/35 text-white shadow-[0_0_16px_rgba(104,90,255,0.28)] hover:border-cosmic-gold/70 hover:text-cosmic-gold",
+const variants: Record<Variant, string> = {
+  primary:
+    "border-yellow-300/70 bg-gradient-to-r from-amber-300/30 to-yellow-400/25 text-yellow-100 glow-gold hover:bg-amber-300/35",
+  outline:
+    "border-violet-300/45 bg-slate-900/45 text-slate-100 glow-purple hover:border-violet-200/75 hover:bg-violet-500/20",
   social:
-    "border-violet-100/65 bg-gradient-to-r from-indigo-500/26 to-fuchsia-500/26 text-white shadow-[0_0_22px_rgba(139,92,246,0.26)] hover:border-cosmic-gold/65 hover:shadow-glow-soft"
+    "border-violet-300/55 bg-violet-500/15 text-white glow-purple hover:bg-violet-500/24",
+  wallet:
+    "border-violet-300/60 bg-slate-900/55 text-slate-100 glow-purple hover:border-violet-200/80"
 };
 
-const baseStyles =
-  "inline-flex items-center justify-center rounded-full border px-7 py-3 text-base font-semibold tracking-wide transition-all duration-300";
+const base =
+  "inline-flex items-center justify-center rounded-full border px-5 py-2.5 text-sm font-semibold tracking-wide transition-all duration-200";
 
-export function Button({
-  children,
-  href,
-  variant = "hero",
-  className,
-  target,
-  rel
-}: ButtonProps) {
-  const classes = cn(baseStyles, variantStyles[variant], className);
+export function Button({ children, href, variant = "outline", className }: ButtonProps) {
+  const classes = cn(base, variants[variant], className);
 
   if (href) {
-    const external = href.startsWith("http");
-    if (external) {
+    const isExternal = href.startsWith("http");
+    if (isExternal) {
       return (
-        <a href={href} target={target ?? "_blank"} rel={rel ?? "noreferrer"} className={classes}>
+        <a href={href} className={classes} target="_blank" rel="noreferrer">
           {children}
         </a>
       );

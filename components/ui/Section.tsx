@@ -1,26 +1,18 @@
 import { cn } from "@/lib/utils";
 
 type SectionProps = {
-  id?: string;
+  id: string;
   title?: string;
   children: React.ReactNode;
   className?: string;
-  titleClassName?: string;
 };
 
-export function Section({ id, title, children, className, titleClassName }: SectionProps) {
+export function Section({ id, title, children, className }: SectionProps) {
   return (
-    <section id={id} className={cn("px-6 py-20 md:py-24", className)}>
+    <section id={id} className={cn("px-4 py-10 sm:px-6 md:py-14", className)}>
       <div className="mx-auto w-full max-w-6xl">
         {title ? (
-          <h2
-            className={cn(
-              "mb-10 text-center font-[var(--font-space-grotesk)] text-3xl font-bold tracking-tight text-white md:text-4xl",
-              titleClassName
-            )}
-          >
-            {title}
-          </h2>
+          <h2 className="mb-7 text-center text-3xl font-extrabold tracking-tight text-white md:text-4xl">{title}</h2>
         ) : null}
         {children}
       </div>

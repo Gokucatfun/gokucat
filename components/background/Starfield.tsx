@@ -1,11 +1,11 @@
-const stars = Array.from({ length: 70 }).map((_, idx) => ({
+const stars = Array.from({ length: 90 }).map((_, idx) => ({
   id: idx,
   size: `${(idx % 3) + 1}px`,
-  left: `${(idx * 37) % 100}%`,
-  top: `${(idx * 53) % 100}%`,
-  delay: `${(idx % 12) * 0.4}s`,
-  duration: `${3 + (idx % 6)}s`,
-  opacity: 0.3 + ((idx % 5) * 0.1)
+  left: `${(idx * 31) % 100}%`,
+  top: `${(idx * 47) % 100}%`,
+  delay: `${(idx % 11) * 0.45}s`,
+  duration: `${3 + (idx % 7)}s`,
+  opacity: 0.24 + ((idx % 6) * 0.1)
 }));
 
 export function Starfield() {
